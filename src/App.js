@@ -6,17 +6,19 @@
  */
 
 //import './App.css';
-import AduraComponent from './home/myComponent';
+//import AduraComponent from './home/myComponent';
 import BlogComponent from './blogs/blogs';
+import AduraComponent from './home/myComponent';
 
 function App() {
   const title = "Welcome to Adura's very first react project";
   return (
     <div className="App">
-      <AduraComponent></AduraComponent>
+   
       <div className="content">
         <h1> { title}</h1>
         <br></br>
+        <AduraComponent></AduraComponent>
         <BlogComponent></BlogComponent>
         </div>
     </div>
