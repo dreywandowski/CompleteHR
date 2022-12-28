@@ -6,12 +6,12 @@
  */
 
 //import './App.css';
-//import AduraComponent from './home/myComponent';
-import BlogComponent from './blogs/blogs';
 import AduraComponent from './home/myComponent';
+import BlogComponent from './blogs/blogs';
+import SignInSide from './home/SignInSide';
 
 function App() {
-  const title = "Welcome to Adura's very first react project";
+  const title = "Welcome to CompleteHR, your one-stop platform for your Human Resources needs.";
   return (
     <div className="App">
    
@@ -20,6 +20,7 @@ function App() {
         <br></br>
         <AduraComponent></AduraComponent>
         <BlogComponent></BlogComponent>
+        <SignInSide></SignInSide>
         </div>
     </div>
   );
