@@ -5,18 +5,28 @@
  */
 
 const BlogList = (props) => {
-    /* for us to access property from the parent component (prop) we need to pass in the 'props' keyword
+    /* for us to access property from the parent component (props) we need to pass in the 'props' keyword
     which is an object for ALL props passed, then access our own specific prop using
     dot notation */
-    
+     
     const blogs = props.blogs;
+    const title = props.title;
+    const deleteBlog = props.delete;
+
+    // we can destruct the props object and use them directly
+    // const BlogList = ({blogs, title}) => {
+
+    
     return ( 
         <div className="blogs">
+              <em>{title}</em>
            {
            blogs.map((blog) =>(
             <div className="blog-preview" key={blog.id}>
                 <h3>{blog.title}</h3>
                 <p>{blog.body} </p>
+                <button onClick={() => 
+                deleteBlog(blog.id)}>Delete Blog</button>
                 </div>
            ))
            } 

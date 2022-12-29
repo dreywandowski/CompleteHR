@@ -23,6 +23,9 @@ const  AduraComponent = () => {
    // as we are changing it in javascript. useState can be used to
    // get the original value while the second method to set it, using the two methods available to us
    // from useState by default, first is to get, second is to set
+
+   // useEffect is another React Hook used to capture data for every rendering of the DOM.
+   // this fires for every
     const [names, setName] = useState('dreywandowski');
     const handleClickState = (e, names) => {
       setName(names);
