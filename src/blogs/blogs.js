@@ -11,9 +11,9 @@ import BlogList from "./bloglist";
 
 const BlogComponent = () => {
 const [blogs, setBlog] = useState([
-    {title: 'Learning React', body: 'bulu bala', id:1},
-    {title: 'Buhari!!!!!', body: 'bala bulu', id:2},
-    {title: 'Emi Lokan', body: 'gbe mi debe', id:3},
+    {title: 'Learning React', body: 'When you’re backed against the wall, break the goddamn thing down.', id:1},
+    {title: 'Buhari!!!!!', body: 'That’s the difference between you and me. You wanna lose small, I wanna win big.', id:2},
+    {title: 'Emi Lokan', body: 'Sorry, I can’t hear you over the sound of how awesome I am.', id:3},
 ]
 
 );

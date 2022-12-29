@@ -20,7 +20,7 @@ function App() {
         <br></br>
         <AduraComponent></AduraComponent>
         <BlogComponent></BlogComponent>
-        <SignInSide></SignInSide>
+     
         </div>
     </div>
   );

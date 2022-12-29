@@ -35,7 +35,7 @@ const  AduraComponent = () => {
                 <a href="/create"> Add</a>
                 <a href="/Test" style={{'color': 'green', 'backgroundColor':'#f1356d', 'borderRadius': '30px'}}> Testing Inline CSS</a>
                <button onClick={(e) => 
-                handleClick('Aduramimo', e)}>I am clickable!</button>
+                handleClick('Aduramimo Oludare', e)}>I am clickable!</button>
              <button style={{'color': 'indigo', 'backgroundColor':'#maroon', 'borderRadius': '30px'}}onClick={(e) => 
                 handleClickState(e, 'Bukayo Saka')}>I want to change state using useState</button>
            

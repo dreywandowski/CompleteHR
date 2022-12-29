@@ -16,7 +16,7 @@ const BlogList = (props) => {
            blogs.map((blog) =>(
             <div className="blog-preview" key={blog.id}>
                 <h3>{blog.title}</h3>
-                <p>Written by {blog.body} </p>
+                <p>{blog.body} </p>
                 </div>
            ))
            } 
