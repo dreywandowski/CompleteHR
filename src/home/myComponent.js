@@ -25,7 +25,15 @@ const  AduraComponent = () => {
    // from useState by default, first is to get, second is to set
 
    // useEffect is another React Hook used to capture data for every rendering of the DOM.
-   // this fires for every
+   // this fires for every refresh.
+
+   /**
+    * We can use a mock JSON server to imitate a database in lieu of a traditional external API call
+    * create a json file, install json-server dependency and also watch
+    * then npx json-server db/db.json --watch --port 8000 .
+    * 
+    * the routes for the file will be created
+    */
     const [names, setName] = useState('dreywandowski');
     const handleClickState = (e, names) => {
       setName(names);

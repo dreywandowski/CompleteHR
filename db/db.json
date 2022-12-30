@@ -1,0 +1,36 @@
+{
+    "posts": [{
+        "id": 1,
+        "name": "Satheesh",
+        "email": "Sat@mail.com",
+        "adderss": "South street"
+    }, {
+        "id": 2,
+        "name": "John",
+        "email": "john@mail.com",
+        "adderss": "North street"
+    }, {
+        "id": 3,
+        "name": "Robert",
+        "email": "robert@mail.com",
+        "adderss": "East street"
+    }, {
+        "id": 4,
+        "name": "Mani",
+        "email": "mani@mail.com",
+        "adderss": "West street"
+    }],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
+    "blogs": [{
+        "title": "Learning React', body: 'When you’re backed against the wall, break the goddamn thing down.', id:1, author:'Harvey"},
+    {
+"title": "Buhari!!!!!', body: 'That’s the difference between you and me. You wanna lose small, I wanna win big.', id:2, author:'Harvey'"
+},
+        {
+            "title": "Emi Lokan', body: 'Sorry, I can’t hear you over the sound of how awesome I am.', id:3, author:'James'"
+    }]
+}
