@@ -5,11 +5,15 @@ const CreateBlog = () => {
     const [body, setBody] = useState('');
     const [author, setAuthour] = useState('');
 
+    const handleSubmit = (e) => {
+
+    }
+
     return ( 
       
         <div className="create">
             <h2> Add a New Blog</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label> Blog title:</label>
                 <input type="text" required  value={title}
                 onChange={(e) => setTitle(e.target.value)}/>
@@ -25,6 +29,8 @@ const CreateBlog = () => {
                     <option value="daniel"> daniel</option>
                     <option value="xtey"> xtey</option>
                 </select>
+                <br></br> <br></br>
+                <button type="submit">Add Blog</button>
                 <p> {title}</p>
                 <p> {body}</p>
                 <p> {author}</p>
