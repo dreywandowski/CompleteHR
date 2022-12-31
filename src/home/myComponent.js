@@ -7,6 +7,7 @@ attribute like in HTML, but the css attritibutes will be name:value pairs
 in objects, attributes with hypens will have the camel case
 */
 import { useState } from "react";
+import {Link} from "react-router-dom";
 
 const  AduraComponent = () => {
 
@@ -33,6 +34,7 @@ const  AduraComponent = () => {
     * then npx json-server db/db.json --watch --port 8000 .
     * 
     * the routes for the file will be created
+    * Replace a href with with React's Link to for a quick loading.
     */
     const [names, setName] = useState('dreywandowski');
     const handleClickState = (e, names) => {
@@ -42,9 +44,9 @@ const  AduraComponent = () => {
         <nav className="navbar">
             <h1>Adura's Blog</h1>
             <div className="links">
-                <a href="/"> Home</a>
-                <a href="/create"> Add</a>
-                <a href="/Test" style={{'color': 'green', 'backgroundColor':'#f1356d', 'borderRadius': '30px'}}> Testing Inline CSS</a>
+                <Link to="/"> Home</Link>
+                <Link to="/create"> Add</Link>
+                <Link to="/Test" style={{'color': 'green', 'backgroundColor':'#f1356d', 'borderRadius': '30px'}}> Testing Inline CSS</Link>
                <button onClick={(e) => 
                 handleClick('Aduramimo Oludare', e)}>I am clickable!</button>
              <button style={{'color': 'indigo', 'backgroundColor':'#maroon', 'borderRadius': '30px'}}onClick={(e) => 

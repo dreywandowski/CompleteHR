@@ -19,8 +19,11 @@ const [isPending, setLoading] = useState(true);
 const [error, setError] = useState(null);
 
     useEffect(() =>{
+        // prevent DOM remanipulation on refreshes of a page if data is same
+        const abortCont = new AbortController();
+
         setTimeout(()=> {
-          fetch(url).
+          fetch(url, {signal : abortCont.signal}).
           then(res =>{
             //console.log(res)
             if(!res.ok){
@@ -34,14 +37,21 @@ const [error, setError] = useState(null);
             setData(data)
             setLoading(false)
             setError(null)
-        console.log(data)
+       // console.log(data)
           }).
           catch(err =>{
+            if(err.name =="AbortError"){
+                console.log(err.message);
+            }
+            else{
             console.log(err.message);
             setError(err.message);
+            }
           });
         }, 1000);
         
+        // cleanup function to abort the fetch being redone again
+        return () => abortCont.abort();
       }, [url]);
       
       return {data, isPending, error}

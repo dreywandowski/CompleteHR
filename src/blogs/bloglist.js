@@ -11,7 +11,9 @@ const BlogList = (props) => {
      
     const blogs = props.blogs;
     const title = props.title;
-    const deleteBlog = props.delete;
+    //const deleteBlog = props.delete;
+    //<button onClick={() => 
+       // deleteBlog(blog.id)}>Delete Blog</button>
 
     // we can destruct the props object and use them directly
     // const BlogList = ({blogs, title}) => {
@@ -25,8 +27,7 @@ const BlogList = (props) => {
             <div className="blog-preview" key={blog.id}>
                 <h3>{blog.title}</h3>
                 <p>{blog.body} </p>
-                <button onClick={() => 
-                deleteBlog(blog.id)}>Delete Blog</button>
+            <br></br>
                 </div>
            ))
            } 
