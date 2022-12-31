@@ -9,6 +9,8 @@
 import AduraComponent from './home/myComponent';
 import BlogComponent from './blogs/blogs';
 import CreateBlog from './blogs/createBlog';
+import BlogDetails from './blogs/blogDetails';
+
 import SignInSide from './home/SignInSide';
 
 /* react router, to switch routes **/
@@ -19,16 +21,19 @@ function App() {
   return (
     <Router>
     <div className="App">
-    <AduraComponent></AduraComponent>
+    <AduraComponent />
       <div className="content">
         <h1> { title}</h1>
         <br></br>
        <Switch>
         <Route exact path="/">
-          <BlogComponent></BlogComponent>
+          <BlogComponent />
           </Route>
           <Route  path="/create">
-          <CreateBlog></CreateBlog>
+          <CreateBlog />
+          </Route>
+          <Route  path="/blogs/:id">
+          <BlogDetails />
           </Route>
           </Switch>
         

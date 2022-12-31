@@ -3,7 +3,7 @@
  * and makes our work neater. In this example, this file is the child component while blogs.js is the parent component.
  * 
  */
-
+import {Link} from "react-router-dom";
 const BlogList = (props) => {
     /* for us to access property from the parent component (props) we need to pass in the 'props' keyword
     which is an object for ALL props passed, then access our own specific prop using
@@ -25,6 +25,8 @@ const BlogList = (props) => {
            {
            blogs.map((blog) =>(
             <div className="blog-preview" key={blog.id}>
+                <Link to={`blogs/${blog.id}`}>
+               <h3>{blog.id}</h3> </Link>
                 <h3>{blog.title}</h3>
                 <p>{blog.body} </p>
             <br></br>
